@@ -180,7 +180,7 @@ if st.button("Identify"):
         st.balloons()
         st.write("This animal is a",pred)
 
-        df = pd.DataFrame({"Breed":list(preds.keys()),"Probability":list(preds.values())}, index = list(range(1,6)))
+        df = pd.DataFrame({"Animal":list(preds.keys()),"Probability":list(preds.values())}, index = list(range(1,6)))
         st.write("Top 5 most likely animals:")
         st.dataframe(df)
     except:
