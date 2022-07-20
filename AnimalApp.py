@@ -177,7 +177,7 @@ if st.button("Identify"):
             return pred, top_preds
 
         pred, preds = predictor(Image.open(uploaded_file), n=5)
-        
+        st.balloons()
         st.write("This animal is a",pred)
 
         df = pd.DataFrame({"Breed":list(preds.keys()),"Probability":list(preds.values())}, index = list(range(1,6)))
